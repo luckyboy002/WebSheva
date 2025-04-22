@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen bg-black text-white">
+
+  <!-- Navbar -->
+  <nav class="w-full flex justify-end px-10 py-5 fixed top-0 left-0 z-50 bg-black/70 backdrop-blur-md">
+    <ul class="flex space-x-6 text-sm font-semibold">
+      <li><a href="index.html" class="hover:text-purple-400">Home</a></li>
+      <li><a href="contact.html" class="hover:text-purple-400">Contact</a></li>
+      <li><a href="sertif.html" class="hover:text-purple-400">Sertificate</a></li>
+      <li><a href="project.html" class="hover:text-purple-400">Projects</a></li>
+      <li><a href="ABOUT ME.html" class="hover:text-purple-400">About Me</a></li>
+    </ul>
+    <div class="absolute top-1 left-3 z-50">
+      <img src="LOGO.png" alt="Logo" class="w-10 opacity-100">
+    </div>
+  </nav>
+
+  <!-- Background Layer -->
+  <div class="fixed inset-0 bg-[url('background.jpg')] bg-cover bg-center opacity-50 z-0"></div>
+  <div class="fixed inset-0 bg-black opacity-0 z-0"></div>
+
+  <!-- Logo Overlay -->
+  <div class="fixed inset-0 flex items-center justify-center z-0 pointer-events-none">
+    <img src="LOGO.png" alt="Logo" class="w-100 opacity-10">
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex items-center justify-center relative z-10 pt-36 px-4">
+    <div class="bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-300/30 p-8 max-w-xl w-full text-black transition-transform duration-300 hover:scale-[1.01]">
+      
+      <!-- Profile Picture -->
+      <div class="w-full flex justify-center mb-6">
+        <img src="profil1.jpg" alt="Sheva" class="w-48 h-48 rounded-xl object-cover shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl" />
+      </div>
+      
+      <!-- Title with Icon -->
+      <h1 class="text-3xl font-bold text-center mb-6 flex items-center justify-center gap-2">
+        <i class="fas fa-user-circle text-purple-500"></i> About Me
+      </h1>
+      
+      <!-- Description -->
+      <p class="text-gray-800 mb-4">
+        Halo! Nama saya <strong>Sheva Lukiyanto</strong>, seorang mahasiswa <span class="text-purple-600 font-semibold">Ilmu Komputer</span> di Universitas Lampung yang antusias dengan dunia teknologi dan pemrograman.
+      </p>
+      <p class="text-gray-800 mb-4">
+        Ketertarikan saya terhadap dunia komputer dimulai sejak SMA. Sejak itu saya terus belajar dan mengembangkan kemampuan di bidang ini—dari <span class="font-medium text-blue-600">pemrograman</span>, jaringan, hingga multimedia.
+      </p>
+      <p class="text-gray-800">
+        Di luar akademik, saya suka <span class="italic">mendengarkan musik</span>. Band favorit saya adalah <strong>Skillet</strong>, yang selalu berhasil membangkitkan semangat lewat lagu-lagu enerjiknya. Musik mereka sering menemani saat saya coding atau belajar.
+      </p>
+      <a href="https://open.spotify.com/playlist/37i9dQZF1EIXndaq8tamMo?si=10ed2bd2427e492b" target="_blank" class="absolute bottom-3 right-3 text-green-500 hover:text-green-400 transition duration-300 text-xl">
+        <i class="fab fa-spotify"></i>
+      </a>      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-black text-white text-center py-4 mt-10">
+    <p class="text-sm">© Made with Heart, <a href="#" class="underline hover:text-purple-400">Sheva Lukiyanto</a>.</p>
+  </footer>
+
+</body>
+</html>

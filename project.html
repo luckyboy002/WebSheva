@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen bg-black text-white">
+
+  <!-- Navbar -->
+  <nav class="w-full flex justify-end px-10 py-5 fixed top-0 left-0 z-50 bg-black/70 backdrop-blur-md">
+    <ul class="flex space-x-6 text-sm font-semibold">
+      <li><a href="index.html" class="hover:text-purple-400">Home</a></li>
+      <li><a href="contact.html" class="hover:text-purple-400">Contact</a></li>
+      <li><a href="sertif.html" class="hover:text-purple-400">Sertificate</a></li>
+      <li><a href="project.html" class="hover:text-purple-400">Projects</a></li>
+      <li><a href="ABOUT ME.html" class="hover:text-purple-400">About Me</a></li>
+    </ul>
+    <div class="absolute top-1 left-3 z-50">
+      <img src="LOGO.png" alt="Logo" class="w-10 opacity-100" />
+    </div>
+  </nav>
+
+  <!-- Background -->
+  <div class="fixed inset-0 bg-[url('background.jpg')] bg-cover bg-center opacity-30 z-0"></div>
+  <div class="fixed inset-0 bg-black opacity-0 z-0"></div>
+
+  <!-- Main Content -->
+  <main class="flex-grow pt-32 px-6 relative z-10 max-w-6xl mx-auto">
+    <h1 class="text-4xl font-bold text-center mb-10">My Projects</h1>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Project Card 1 -->
+      <div class="bg-gray-900 rounded-xl shadow-lg p-6 transition-transform hover:scale-105">
+        <h2 class="text-xl font-semibold mb-2">Sistem Informasi Perkebunan Jeruk</h2>
+        <p class="text-gray-300 text-sm mb-4">Web untuk membantu pengelolaan hasil panen, transaksi penjualan, dan pelaporan digital untuk petani lokal.</p>
+        <a href="#" class="text-purple-400 hover:underline text-sm">Lihat Detail</a>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="bg-gray-900 rounded-xl shadow-lg p-6 transition-transform hover:scale-105">
+        <h2 class="text-xl font-semibold mb-2">Game Puzzle JavaFX</h2>
+        <p class="text-gray-300 text-sm mb-4">Game edukasi berbasis JavaFX dengan prinsip OOP lengkap: encapsulation, inheritance, polymorphism & interface.</p>
+        <a href="#" class="text-purple-400 hover:underline text-sm">Lihat Detail</a>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="bg-gray-900 rounded-xl shadow-lg p-6 transition-transform hover:scale-105">
+        <h2 class="text-xl font-semibold mb-2">Klasifikasi Penipuan Kartu Kredit</h2>
+        <p class="text-gray-300 text-sm mb-4">Analisis data dengan Machine Learning untuk mendeteksi transaksi penipuan secara akurat.</p>
+        <a href="#" class="text-purple-400 hover:underline text-sm">Lihat Detail</a>
+      </div>
+
+      <!-- Tambahkan lagi jika perlu -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full bg-black text-white text-center py-4 mt-10">
+    <p class="text-sm">© Made with Heart, <a href="#" class="underline hover:text-purple-400">Sheva Lukiyanto</a>.</p>
+  </footer>
+
+</body>
+</html>
