@@ -1,77 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me</title>
+  <title>About Me | Sheva Lukiyanto</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css" />
 </head>
+
 <body class="flex flex-col min-h-screen bg-black text-white">
 
   <!-- Navbar -->
-  <nav class="w-full flex justify-end px-10 py-5 fixed top-0 left-0 z-50 bg-black/70 backdrop-blur-md">
-    <ul class="flex space-x-6 text-sm font-semibold">
-      <li><a href="index.html" class="hover:text-purple-400">Home</a></li>
-      <li><a href="contact.html" class="hover:text-purple-400">Contact</a></li>
-      <li><a href="sertif.html" class="hover:text-purple-400">Sertificate</a></li>
-      <li><a href="project.html" class="hover:text-purple-400">Projects</a></li>
-      <li><a href="ABOUT ME.html" class="hover:text-purple-400">About Me</a></li>
-    </ul>
-    <div class="absolute top-1 left-3 z-50">
-      <img src="LOGO.png" alt="Logo" class="w-10 opacity-100">
+  <nav class="w-full flex justify-between items-center px-6 md:px-10 py-5 fixed top-0 left-0 z-50 glass">
+    <div class="flex items-center gap-3">
+      <img src="LOGO.png" alt="Logo" class="w-8">
+      <span class="font-bold tracking-wider text-purple-400">SHEVA.L</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <ul class="hidden md:flex space-x-6 text-sm font-semibold">
+        <li><a href="index.html" class="hover:text-purple-400">Home</a></li>
+        <li><a href="ABOUT ME.html" class="hover:text-purple-400">About</a></li>
+        <li><a href="project.html" class="hover:text-purple-400">Projects</a></li>
+        <li><a href="sertif.html" class="hover:text-purple-400">Certificates</a></li>
+        <li><a href="contact.html" class="hover:text-purple-400">Contact</a></li>
+      </ul>
+      <div id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+        <i class="fas fa-moon text-purple-400"></i>
+      </div>
     </div>
   </nav>
 
-  <!-- Background Layer -->
-  <div class="fixed inset-0 bg-[url('background.jpg')] bg-cover bg-center opacity-50 z-0"></div>
-  <div class="fixed inset-0 bg-black opacity-0 z-0"></div>
-
-  <!-- Logo Overlay -->
-  <div class="fixed inset-0 flex items-center justify-center z-0 pointer-events-none">
-    <img src="LOGO.png" alt="Logo" class="w-100 opacity-10">
+  <!-- Background overlay -->
+  <div class="fixed inset-0 z-0">
+    <div class="absolute inset-0 bg-[url('background.jpg')] bg-cover bg-center opacity-20"></div>
+    <div class="absolute inset-0 bg-gradient-to-tr from-black via-black/80 to-purple-900/20"></div>
   </div>
 
   <!-- Main Content -->
-  <main class="flex-grow flex items-center justify-center relative z-10 pt-36 px-4">
-    <div class="bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-300/30 p-8 max-w-xl w-full text-black transition-transform duration-300 hover:scale-[1.01]">
-      
-      <!-- Profile Picture -->
-      <div class="w-full flex justify-center mb-6">
-        <img src="profil1.jpg" alt="Sheva" class="w-48 h-48 rounded-xl object-cover shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl" />
+  <main class="flex-grow flex items-center justify-center relative z-10 pt-32 pb-20 px-4">
+    <div class="glass rounded-3xl p-8 md:p-12 max-w-4xl w-full border border-white/10 section-card" data-aos="fade-up">
+
+      <div class="grid md:grid-cols-5 gap-12 items-center">
+        <!-- Profile Picture Column -->
+        <div class="md:col-span-2 flex flex-col items-center">
+          <div class="relative group">
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+            </div>
+            <img src="profil1.jpg" alt="Sheva"
+              class="relative w-full aspect-square rounded-2xl object-cover shadow-2xl transition duration-500 group-hover:scale-[1.02]" />
+          </div>
+          <div class="mt-8 flex gap-4 text-2xl">
+            <a href="https://instagram.com/sheva_luck" class="text-gray-400 hover:text-pink-500 transition-colors"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://github.com/luckyboy002" class="text-gray-400 hover:text-white transition-colors"><i
+                class="fab fa-github"></i></a>
+            <a href="https://open.spotify.com/playlist/37i9dQZF1EIXndaq8tamMo?si=10ed2bd2427e492b" target="_blank"
+              class="text-gray-400 hover:text-green-500 transition-colors">
+              <i class="fab fa-spotify"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Text Column -->
+        <div class="md:col-span-3">
+          <h1 class="text-4xl font-bold mb-6 flex items-center gap-3">
+            <span class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">About Me</span>
+            <div class="h-1 flex-grow bg-white/5 rounded-full"></div>
+          </h1>
+
+          <div class="space-y-6 text-gray-300">
+            <p class="leading-relaxed">
+              Halo! Nama saya <strong class="text-white">Sheva Lukiyanto</strong>, seorang mahasiswa <span
+                class="text-purple-400 font-semibold">Ilmu Komputer</span> di Universitas Lampung yang antusias dengan
+              dunia teknologi dan pemrograman.
+            </p>
+            <p class="leading-relaxed">
+              Ketertarikan saya terhadap dunia komputer dimulai sejak SMA. Sejak itu saya terus belajar dan
+              mengembangkan kemampuan di bidang ini—dari <span class="text-blue-400 font-medium">pemrograman</span>,
+              jaringan, hingga multimedia.
+            </p>
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/5 italic">
+              "Di luar akademik, saya sangat menyukai musik. Band favorit saya adalah <strong
+                class="text-white">Skillet</strong>, yang selalu berhasil membangkitkan semangat lewat lagu-lagu
+              enerjiknya."
+            </div>
+
+            <!-- Skill Tags -->
+            <div class="pt-4 flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 rounded-lg bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs">JavaFX</span>
+              <span class="px-3 py-1 rounded-lg bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs">Web
+                Dev</span>
+              <span
+                class="px-3 py-1 rounded-lg bg-green-500/10 border border-green-500/20 text-green-300 text-xs">Machine
+                Learning</span>
+              <span
+                class="px-3 py-1 rounded-lg bg-yellow-500/10 border border-yellow-500/20 text-yellow-300 text-xs">Figma
+                Design</span>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <!-- Title with Icon -->
-      <h1 class="text-3xl font-bold text-center mb-6 flex items-center justify-center gap-2">
-        <i class="fas fa-user-circle text-purple-500"></i> About Me
-      </h1>
-      
-      <!-- Description -->
-      <p class="text-gray-800 mb-4">
-        Halo! Nama saya <strong>Sheva Lukiyanto</strong>, seorang mahasiswa <span class="text-purple-600 font-semibold">Ilmu Komputer</span> di Universitas Lampung yang antusias dengan dunia teknologi dan pemrograman.
-      </p>
-      <p class="text-gray-800 mb-4">
-        Ketertarikan saya terhadap dunia komputer dimulai sejak SMA. Sejak itu saya terus belajar dan mengembangkan kemampuan di bidang ini—dari <span class="font-medium text-blue-600">pemrograman</span>, jaringan, hingga multimedia.
-      </p>
-      <p class="text-gray-800">
-        Di luar akademik, saya suka <span class="italic">mendengarkan musik</span>. Band favorit saya adalah <strong>Skillet</strong>, yang selalu berhasil membangkitkan semangat lewat lagu-lagu enerjiknya. Musik mereka sering menemani saat saya coding atau belajar.
-      </p>
-      <a href="https://open.spotify.com/playlist/37i9dQZF1EIXndaq8tamMo?si=10ed2bd2427e492b" target="_blank" class="absolute bottom-3 right-3 text-green-500 hover:text-green-400 transition duration-300 text-xl">
-        <i class="fab fa-spotify"></i>
-      </a>      
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="w-full bg-black text-white text-center py-4 mt-10">
-    <p class="text-sm">© Made with Heart, <a href="#" class="underline hover:text-purple-400">Sheva Lukiyanto</a>.</p>
+  <footer class="w-full bg-black/80 backdrop-blur-md border-t border-white/5 text-white text-center py-6 relative z-10">
+    <p class="text-sm text-gray-500">© 2026 Made with Heart by <span class="text-purple-400">Sheva Lukiyanto</span></p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="main.js"></script>
+
 </body>
+
 </html>

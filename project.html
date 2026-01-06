@@ -1,75 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Projects</title>
+  <title>Projects | Sheva Lukiyanto</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css" />
 </head>
+
 <body class="flex flex-col min-h-screen bg-black text-white">
 
   <!-- Navbar -->
-  <nav class="w-full flex justify-end px-10 py-5 fixed top-0 left-0 z-50 bg-black/70 backdrop-blur-md">
-    <ul class="flex space-x-6 text-sm font-semibold">
-      <li><a href="index.html" class="hover:text-purple-400">Home</a></li>
-      <li><a href="contact.html" class="hover:text-purple-400">Contact</a></li>
-      <li><a href="sertif.html" class="hover:text-purple-400">Sertificate</a></li>
-      <li><a href="project.html" class="hover:text-purple-400">Projects</a></li>
-      <li><a href="ABOUT ME.html" class="hover:text-purple-400">About Me</a></li>
-    </ul>
-    <div class="absolute top-1 left-3 z-50">
-      <img src="LOGO.png" alt="Logo" class="w-10 opacity-100" />
+  <nav class="w-full flex justify-between items-center px-6 md:px-10 py-5 fixed top-0 left-0 z-50 glass">
+    <div class="flex items-center gap-3">
+      <img src="LOGO.png" alt="Logo" class="w-8">
+      <span class="font-bold tracking-wider text-purple-400">SHEVA.L</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <ul class="hidden md:flex space-x-6 text-sm font-semibold">
+        <li><a href="index.html" class="hover:text-purple-400">Home</a></li>
+        <li><a href="ABOUT ME.html" class="hover:text-purple-400">About</a></li>
+        <li><a href="project.html" class="hover:text-purple-400">Projects</a></li>
+        <li><a href="sertif.html" class="hover:text-purple-400">Certificates</a></li>
+        <li><a href="contact.html" class="hover:text-purple-400">Contact</a></li>
+      </ul>
+      <div id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+        <i class="fas fa-moon text-purple-400"></i>
+      </div>
     </div>
   </nav>
 
-  <!-- Background -->
-  <div class="fixed inset-0 bg-[url('background.jpg')] bg-cover bg-center opacity-30 z-0"></div>
-  <div class="fixed inset-0 bg-black opacity-0 z-0"></div>
-
-  <div class="fixed inset-0 flex items-center justify-center z-0 pointer-events-none">
-    <img src="LOGO.png" alt="Logo" class="w-100 opacity-10">
+  <!-- Background overlay -->
+  <div class="fixed inset-0 z-0">
+    <div class="absolute inset-0 bg-[url('background.jpg')] bg-cover bg-center opacity-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-tr from-black via-black/90 to-blue-900/10"></div>
   </div>
 
   <!-- Main Content -->
-  <main class="flex-grow pt-32 px-6 relative z-10 max-w-6xl mx-auto">
-    <h1 class="text-4xl font-bold text-center mb-10">My Projects</h1>
+  <main class="flex-grow pt-32 pb-20 px-6 relative z-10 max-w-7xl mx-auto w-full">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h1 class="text-5xl font-bold bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent mb-4">Selected
+        Works</h1>
+      <p class="text-gray-400 max-w-2xl mx-auto italic">Explore a collection of my academic and personal projects where
+        I apply coding, design, and problem-solving.</p>
+    </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+
       <!-- Project Card 1 -->
-    <a href="https://www.figma.com/design/AoyuJdjiRe5moQaTYN1ErO/Project-ADSI?t=8QirXN0wh2uyBnFy-1" class="block bg-gray-900 rounded-xl shadow-lg p-6 transition-transform hover:scale-105 hover:shadow-xl">
-      <h2 class="text-xl font-semibold mb-2">Sistem Informasi Perkebunan Jeruk</h2>
-        <p class="text-gray-300 text-sm mb-4">Web untuk membantu pengelolaan hasil panen, transaksi penjualan, dan pelaporan digital untuk petani lokal.</p>
-    <span class="text-purple-400 hover:underline text-sm">Lihat Detail</span>
-    </a>
+      <a href="https://www.figma.com/design/AoyuJdjiRe5moQaTYN1ErO/Project-ADSI?t=8QirXN0wh2uyBnFy-1"
+        class="glass rounded-3xl p-8 pop-out hover:border-purple-500/50 group transition-all">
+        <div
+          class="w-12 h-12 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <i class="fas fa-leaf text-purple-400 text-xl"></i>
+        </div>
+        <h2 class="text-2xl font-bold mb-3 group-hover:text-purple-400 transition-colors">Perkebunan Jeruk</h2>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Web untuk membantu pengelolaan hasil panen, transaksi
+          penjualan, dan pelaporan digital untuk petani lokal.</p>
+        <div class="flex items-center text-purple-400 font-semibold text-sm">
+          <span>View Case Study</span>
+          <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
 
-    <!-- Project Card 2 -->
-    <a href="https://github.com/HusnulKhotami/Project-Akhir-PBO-Game-Java-FX" class="block bg-gray-900 rounded-xl shadow-lg p-6 transition-transform hover:scale-105 hover:shadow-xl">
-      <h2 class="text-xl font-semibold mb-2">Game Puzzle JavaFX</h2>
-      <p class="text-gray-300 text-sm mb-4">Game edukasi berbasis JavaFX dengan prinsip OOP lengkap: encapsulation, inheritance, polymorphism & interface.</p>
-      <span class="text-purple-400 hover:underline text-sm">Lihat Detail</span>
-    </a>
+      <!-- Project Card 2 -->
+      <a href="https://github.com/HusnulKhotami/Project-Akhir-PBO-Game-Java-FX"
+        class="glass rounded-3xl p-8 pop-out hover:border-blue-500/50 group transition-all">
+        <div
+          class="w-12 h-12 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <i class="fas fa-gamepad text-blue-400 text-xl"></i>
+        </div>
+        <h2 class="text-2xl font-bold mb-3 group-hover:text-blue-400 transition-colors">Puzzle Game</h2>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Game edukasi berbasis JavaFX dengan prinsip OOP lengkap:
+          encapsulation, inheritance, polymorphism & interface.</p>
+        <div class="flex items-center text-blue-400 font-semibold text-sm">
+          <span>Github Repository</span>
+          <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
 
-    <!-- Project Card 3 -->
-    <a href="https://colab.research.google.com/drive/1-wD-5wsp5ORSEWLAdOTZaLvEFh3Zx-vV?usp=sharing" class="block bg-gray-900 rounded-xl shadow-lg p-6 transition-transform hover:scale-105 hover:shadow-xl">
-      <h2 class="text-xl font-semibold mb-2">Klasifikasi Penipuan Kartu Kredit</h2>
-      <p class="text-gray-300 text-sm mb-4">Analisis data dengan Machine Learning untuk mendeteksi transaksi penipuan secara akurat.</p>
-      <span class="text-purple-400 hover:underline text-sm">Lihat Detail</span>
-    </a>
+      <!-- Project Card 3 -->
+      <a href="https://colab.research.google.com/drive/1-wD-5wsp5ORSEWLAdOTZaLvEFh3Zx-vV?usp=sharing"
+        class="glass rounded-3xl p-8 pop-out hover:border-green-500/50 group transition-all">
+        <div
+          class="w-12 h-12 rounded-2xl bg-green-500/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+          <i class="fas fa-credit-card text-green-400 text-xl"></i>
+        </div>
+        <h2 class="text-2xl font-bold mb-3 group-hover:text-green-400 transition-colors">Fraud Classification</h2>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Analisis data dengan Machine Learning untuk mendeteksi
+          transaksi penipuan kartu kredit secara akurat.</p>
+        <div class="flex items-center text-green-400 font-semibold text-sm">
+          <span>View Notebook</span>
+          <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+      </a>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="w-full bg-black text-white text-center py-4 mt-10">
-    <p class="text-sm">© Made with Heart, <a href="#" class="underline hover:text-purple-400">Sheva Lukiyanto</a>.</p>
+  <footer
+    class="w-full bg-black/80 backdrop-blur-md border-t border-white/5 text-white text-center py-6 relative z-10 mt-auto">
+    <p class="text-sm text-gray-500">© 2026 Made with Heart by <span class="text-purple-400">Sheva Lukiyanto</span></p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
