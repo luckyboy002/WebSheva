@@ -1,139 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Sheva Lukiyanto</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="Style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Sheva Lukiyanto — WhatsApp, Instagram, Email">
+    <title>CONTACT — Sheva Lukiyanto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="flex flex-col min-h-screen bg-black text-white">
-
-  <!-- Navbar -->
-  <nav class="w-full flex justify-between items-center px-6 md:px-10 py-5 fixed top-0 left-0 z-50 glass">
-    <div class="flex items-center gap-3">
-      <img src="LOGO.png" alt="Logo" class="w-8">
-      <span class="font-bold tracking-wider text-purple-400">SHEVA.L</span>
-    </div>
-    <div class="flex items-center gap-6">
-      <ul class="hidden md:flex space-x-6 text-sm font-semibold">
-        <li><a href="index.html" class="hover:text-purple-400">Home</a></li>
-        <li><a href="ABOUT ME.html" class="hover:text-purple-400">About</a></li>
-        <li><a href="project.html" class="hover:text-purple-400">Projects</a></li>
-        <li><a href="sertif.html" class="hover:text-purple-400">Certificates</a></li>
-        <li><a href="contact.html" class="hover:text-purple-400">Contact</a></li>
-      </ul>
-      <div id="theme-toggle" class="theme-toggle" title="Toggle Theme">
-        <i class="fas fa-moon text-purple-400"></i>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Background overlay -->
-  <div class="fixed inset-0 z-0">
-    <div class="absolute inset-0 bg-[url('background.jpg')] bg-cover bg-center opacity-10"></div>
-    <div class="absolute inset-0 bg-gradient-to-br from-black via-black/90 to-blue-900/10"></div>
-  </div>
-
-  <!-- Main Content -->
-  <main class="flex-grow flex flex-col items-center justify-center pt-32 pb-20 relative z-10 px-6">
-    <div class="max-w-5xl w-full grid lg:grid-cols-2 gap-12 items-start" data-aos="fade-up">
-
-      <!-- Contact Info Section -->
-      <div class="space-y-8">
-        <div>
-          <h1 class="text-5xl font-bold bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent mb-4">Get
-            in Touch</h1>
-          <p class="text-gray-400">I'm always open to discussing new projects, creative ideas, or opportunities to be
-            part of your visions.</p>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-slash"></div>
+            <div class="loading-slash delay-1"></div>
+            <div class="loading-slash delay-2"></div>
+            <div class="loading-text">
+                <span>S</span><span>H</span><span>E</span><span>V</span><span>A</span>
+                <span class="space"></span>
+                <span>.</span><span>L</span>
+            </div>
         </div>
-
-        <div class="grid gap-4">
-          <a href="https://wa.me/081927252225"
-            class="glass p-6 rounded-2xl flex items-center gap-6 pop-out border-white/5 hover:border-green-500/50 group">
-            <div
-              class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <i class="fab fa-whatsapp text-green-500 text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="font-bold">WhatsApp</h3>
-              <p class="text-sm text-gray-400">Chat with me instantly</p>
-            </div>
-          </a>
-
-          <a href="https://instagram.com/sheva_luck"
-            class="glass p-6 rounded-2xl flex items-center gap-6 pop-out border-white/5 hover:border-pink-500/50 group">
-            <div
-              class="w-12 h-12 rounded-xl bg-pink-500/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <i class="fab fa-instagram text-pink-500 text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="font-bold">Instagram</h3>
-              <p class="text-sm text-gray-400">Follow my daily updates</p>
-            </div>
-          </a>
-
-          <a href="mailto:Shevaluki02092005@gmail.com"
-            class="glass p-6 rounded-2xl flex items-center gap-6 pop-out border-white/5 hover:border-blue-500/50 group">
-            <div
-              class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-              <i class="fas fa-envelope text-blue-500 text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="font-bold">Email</h3>
-              <p class="text-sm text-gray-400">Shevaluki02092005@gmail.com</p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Form Section -->
-      <div class="glass p-8 md:p-10 rounded-3xl border border-white/10">
-        <h2 class="text-2xl font-bold mb-8">Send a Message</h2>
-        <form class="space-y-6">
-          <div class="grid md:grid-cols-2 gap-6">
-            <div class="space-y-2">
-              <label class="text-sm font-semibold text-gray-400 ml-1">Nama</label>
-              <input type="text" placeholder="John Doe"
-                class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-purple-500 transition-colors"
-                required />
-            </div>
-            <div class="space-y-2">
-              <label class="text-sm font-semibold text-gray-400 ml-1">Email</label>
-              <input type="email" placeholder="john@example.com"
-                class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-purple-500 transition-colors"
-                required />
-            </div>
-          </div>
-          <div class="space-y-2">
-            <label class="text-sm font-semibold text-gray-400 ml-1">Pesan</label>
-            <textarea rows="4" placeholder="Your message here..."
-              class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-purple-500 transition-colors resize-none"
-              required></textarea>
-          </div>
-          <button type="submit"
-            class="w-full bg-gradient-to-r from-purple-600 to-blue-600 py-4 rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-all">
-            Send Message
-          </button>
-        </form>
-      </div>
-
     </div>
-  </main>
 
-  <!-- Footer -->
-  <footer
-    class="w-full bg-black/80 backdrop-blur-md border-t border-white/5 text-white text-center py-6 relative z-10 mt-auto">
-    <p class="text-sm text-gray-500">© 2026 Made with Heart by <span class="text-purple-400">Sheva Lukiyanto</span></p>
-  </footer>
+    <nav id="navbar" class="navbar">
+        <div class="nav-brand">
+            <div class="brand-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 28H28L16 2Z" fill="var(--red)" stroke="var(--black)" stroke-width="2"/>
+                    <circle cx="16" cy="18" r="4" fill="var(--black)"/>
+                </svg>
+            </div>
+            <span class="brand-text">SHEVA.L</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link" data-section="hero"><span class="link-bg"></span><span class="link-text">HOME</span></a>
+            <a href="about.html" class="nav-link" data-section="about"><span class="link-bg"></span><span class="link-text">ABOUT</span></a>
+            <a href="skills.html" class="nav-link" data-section="skills"><span class="link-bg"></span><span class="link-text">SKILLS</span></a>
+            <a href="projects.html" class="nav-link" data-section="projects"><span class="link-bg"></span><span class="link-text">PROJECTS</span></a>
+            <a href="certificates.html" class="nav-link" data-section="certificates"><span class="link-bg"></span><span class="link-text">CERTIFICATES</span></a>
+            <a href="contact.html" class="nav-link active" data-section="contact"><span class="link-bg"></span><span class="link-text">CONTACT</span></a>
+        </div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="main.js"></script>
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-bg"></div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link" data-index="0">HOME</a>
+            <a href="about.html" class="mobile-link" data-index="1">ABOUT</a>
+            <a href="skills.html" class="mobile-link" data-index="2">SKILLS</a>
+            <a href="projects.html" class="mobile-link" data-index="3">PROJECTS</a>
+            <a href="certificates.html" class="mobile-link" data-index="4">CERTIFICATES</a>
+            <a href="contact.html" class="mobile-link" data-index="5">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">
+                    <span class="title-slash">//</span> SEND A CALLING CARD
+                </h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="calling-card">
+                        <div class="calling-card-inner">
+                            <div class="cc-header">
+                                <div class="cc-logo">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <path d="M20 4L6 36H34L20 4Z" fill="var(--red)"/>
+                                        <circle cx="20" cy="22" r="5" fill="var(--white)"/>
+                                    </svg>
+                                </div>
+                                <span class="cc-title">CALLING CARD</span>
+                            </div>
+                            <div class="cc-body">
+                                <p class="cc-message">Dear Visitor,<br><br>Saya terbuka untuk <strong>kolaborasi</strong>, diskusi proyek baru, atau sekadar berkenalan. Jangan ragu untuk menghubungi saya!</p>
+                                <p class="cc-sign">— Sheva Lukiyanto, Phantom Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-links">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/6281927252225" target="_blank" class="contact-link" id="contact-whatsapp">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </div>
+                            <span>+62 819-2725-2225</span>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/sheva_luck" target="_blank" class="contact-link" id="contact-instagram">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            </div>
+                            <span>@sheva_luck</span>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:Shevaluki02092005@gmail.com" class="contact-link" id="contact-email">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <span>Shevaluki02092005@gmail.com</span>
+                        </a>
+                        <!-- GitHub -->
+                        <a href="https://github.com/luckyboy002" target="_blank" class="contact-link" id="contact-github">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </div>
+                            <span>github.com/luckyboy002</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">CODENAME</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your name..." required>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">COMM CHANNEL</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Your email..." required>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">SECRET MESSAGE</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Your message..." rows="5" required></textarea>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn-primary submit-btn">
+                            <span class="btn-bg"></span>
+                            <span class="btn-text">SEND CALLING CARD</span>
+                            <svg class="btn-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bg"><div class="footer-stripe"></div></div>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 28H28L16 2Z" fill="var(--red)"/>
+                    <circle cx="16" cy="18" r="4" fill="var(--white)"/>
+                </svg>
+                <span>SHEVA LUKIYANTO</span>
+            </div>
+            <p class="footer-text">Designed &amp; Built with ❤️ by Sheva Lukiyanto — © 2026</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cursor-trail" class="cursor-trail"></div>
+    <script src="script.js"></script>
 </body>
-
 </html>

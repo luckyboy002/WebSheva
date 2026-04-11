@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skills Sheva Lukiyanto — HTML, CSS, JavaScript, Java, Python, Figma, Git, SQL">
+    <title>SKILLS — Sheva Lukiyanto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-slash"></div>
+            <div class="loading-slash delay-1"></div>
+            <div class="loading-slash delay-2"></div>
+            <div class="loading-text">
+                <span>S</span><span>H</span><span>E</span><span>V</span><span>A</span>
+                <span class="space"></span>
+                <span>.</span><span>L</span>
+            </div>
+        </div>
+    </div>
+
+    <nav id="navbar" class="navbar">
+        <div class="nav-brand">
+            <div class="brand-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 28H28L16 2Z" fill="var(--red)" stroke="var(--black)" stroke-width="2"/>
+                    <circle cx="16" cy="18" r="4" fill="var(--black)"/>
+                </svg>
+            </div>
+            <span class="brand-text">SHEVA.L</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link" data-section="hero"><span class="link-bg"></span><span class="link-text">HOME</span></a>
+            <a href="about.html" class="nav-link" data-section="about"><span class="link-bg"></span><span class="link-text">ABOUT</span></a>
+            <a href="skills.html" class="nav-link active" data-section="skills"><span class="link-bg"></span><span class="link-text">SKILLS</span></a>
+            <a href="projects.html" class="nav-link" data-section="projects"><span class="link-bg"></span><span class="link-text">PROJECTS</span></a>
+            <a href="certificates.html" class="nav-link" data-section="certificates"><span class="link-bg"></span><span class="link-text">CERTIFICATES</span></a>
+            <a href="contact.html" class="nav-link" data-section="contact"><span class="link-bg"></span><span class="link-text">CONTACT</span></a>
+        </div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-bg"></div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link" data-index="0">HOME</a>
+            <a href="about.html" class="mobile-link" data-index="1">ABOUT</a>
+            <a href="skills.html" class="mobile-link" data-index="2">SKILLS</a>
+            <a href="projects.html" class="mobile-link" data-index="3">PROJECTS</a>
+            <a href="certificates.html" class="mobile-link" data-index="4">CERTIFICATES</a>
+            <a href="contact.html" class="mobile-link" data-index="5">CONTACT</a>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">
+                    <span class="title-slash">//</span> SKILLS &amp; PERSONAS
+                </h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- Web Front-End -->
+                <div class="skill-card" data-skill="frontend">
+                    <div class="skill-card-bg"></div>
+                    <div class="skill-arcana">THE MAGICIAN</div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="4" y="4" width="40" height="40" rx="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 34L24 14L34 34" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="18" y1="28" x2="30" y2="28" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">FRONT-END</h3>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Tailwind</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="level-bar"><div class="level-fill" data-level="82"></div></div>
+                        <span class="level-text">Lv. 82</span>
+                    </div>
+                </div>
+
+                <!-- Java / OOP -->
+                <div class="skill-card" data-skill="java">
+                    <div class="skill-card-bg"></div>
+                    <div class="skill-arcana">THE EMPEROR</div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M20 8C20 8 14 12 14 20C14 24 16 26 20 28C24 30 28 32 28 38C28 42 24 44 24 44" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M28 8C28 8 34 14 34 20C34 26 30 28 24 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M16 38C16 38 22 40 28 38C34 36 36 30 36 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">JAVA &amp; JAVAFX</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">OOP</span>
+                        <span class="tag">NetBeans</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="level-bar"><div class="level-fill" data-level="78"></div></div>
+                        <span class="level-text">Lv. 78</span>
+                    </div>
+                </div>
+
+                <!-- Python / ML -->
+                <div class="skill-card" data-skill="ml">
+                    <div class="skill-card-bg"></div>
+                    <div class="skill-arcana">THE FORTUNE</div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 30L22 20L28 26L36 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">PYTHON &amp; ML</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Scikit-Learn</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Google Colab</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="level-bar"><div class="level-fill" data-level="70"></div></div>
+                        <span class="level-text">Lv. 70</span>
+                    </div>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-card" data-skill="database">
+                    <div class="skill-card-bg"></div>
+                    <div class="skill-arcana">THE PRIESTESS</div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <ellipse cx="24" cy="12" rx="16" ry="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 12V36C8 39 15 42 24 42C33 42 40 39 40 36V12" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 24C8 27 15 30 24 30C33 30 40 27 40 24" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">DATABASE</h3>
+                    <div class="skill-tags">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Oracle DB</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="level-bar"><div class="level-fill" data-level="75"></div></div>
+                        <span class="level-text">Lv. 75</span>
+                    </div>
+                </div>
+
+                <!-- UI/UX Figma -->
+                <div class="skill-card" data-skill="design">
+                    <div class="skill-card-bg"></div>
+                    <div class="skill-arcana">THE LOVERS</div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M8 8L20 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M40 8L28 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="16" y="16" width="16" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                            <path d="M16 40L24 32L32 40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">UI/UX DESIGN</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Figma</span>
+                        <span class="tag">Prototyping</span>
+                        <span class="tag">Wireframing</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="level-bar"><div class="level-fill" data-level="80"></div></div>
+                        <span class="level-text">Lv. 80</span>
+                    </div>
+                </div>
+
+                <!-- Git / Tools -->
+                <div class="skill-card" data-skill="tools">
+                    <div class="skill-card-bg"></div>
+                    <div class="skill-arcana">THE CHARIOT</div>
+                    <div class="skill-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4L40 14V34L24 44L8 34V14L24 4Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 4V44" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 14L40 34" stroke="currentColor" stroke-width="2"/>
+                            <path d="M40 14L8 34" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">TOOLS &amp; GIT</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Cisco Packet Tracer</span>
+                    </div>
+                    <div class="skill-level">
+                        <div class="level-bar"><div class="level-fill" data-level="72"></div></div>
+                        <span class="level-text">Lv. 72</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bg"><div class="footer-stripe"></div></div>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 28H28L16 2Z" fill="var(--red)"/>
+                    <circle cx="16" cy="18" r="4" fill="var(--white)"/>
+                </svg>
+                <span>SHEVA LUKIYANTO</span>
+            </div>
+            <p class="footer-text">Designed &amp; Built with ❤️ by Sheva Lukiyanto — © 2026</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cursor-trail" class="cursor-trail"></div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,162 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sheva's Portfolio | Home</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="Style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Sheva Lukiyanto — Mahasiswa Ilmu Komputer Universitas Lampung, developer & designer berbasis Persona 5 style">
+    <title>SHEVA LUKIYANTO — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="flex flex-col min-h-screen bg-black text-white">
-
-  <!-- Navbar -->
-  <nav class="w-full flex justify-between items-center px-6 md:px-10 py-5 fixed top-0 left-0 z-50 glass">
-    <div class="flex items-center gap-3">
-      <img src="LOGO.png" alt="Logo" class="w-8">
-      <span class="font-bold tracking-wider text-purple-400">SHEVA.L</span>
+<body>
+    <!-- Loading Screen / All Out Attack intro -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-slash"></div>
+            <div class="loading-slash delay-1"></div>
+            <div class="loading-slash delay-2"></div>
+            <div class="loading-text">
+                <span>T</span><span>A</span><span>K</span><span>E</span>
+                <span class="space"></span>
+                <span>Y</span><span>O</span><span>U</span><span>R</span>
+                <span class="space"></span>
+                <span>H</span><span>E</span><span>A</span><span>R</span><span>T</span>
+            </div>
+        </div>
     </div>
-    <div class="flex items-center gap-6">
-      <ul class="hidden md:flex space-x-6 text-sm font-semibold">
-        <li><a href="index.html" class="hover:text-purple-400">Home</a></li>
-        <li><a href="ABOUT ME.html" class="hover:text-purple-400">About</a></li>
-        <li><a href="project.html" class="hover:text-purple-400">Projects</a></li>
-        <li><a href="sertif.html" class="hover:text-purple-400">Certificates</a></li>
-        <li><a href="contact.html" class="hover:text-purple-400">Contact</a></li>
-      </ul>
-      <div id="theme-toggle" class="theme-toggle" title="Toggle Theme">
-        <i class="fas fa-moon text-purple-400"></i>
-      </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-brand">
+            <div class="brand-icon">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 28H28L16 2Z" fill="var(--red)" stroke="var(--black)" stroke-width="2"/>
+                    <circle cx="16" cy="18" r="4" fill="var(--black)"/>
+                </svg>
+            </div>
+            <span class="brand-text">SHEVA.L</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link active" data-section="hero">
+                <span class="link-bg"></span>
+                <span class="link-text">HOME</span>
+            </a>
+            <a href="about.html" class="nav-link" data-section="about">
+                <span class="link-bg"></span>
+                <span class="link-text">ABOUT</span>
+            </a>
+            <a href="skills.html" class="nav-link" data-section="skills">
+                <span class="link-bg"></span>
+                <span class="link-text">SKILLS</span>
+            </a>
+            <a href="projects.html" class="nav-link" data-section="projects">
+                <span class="link-bg"></span>
+                <span class="link-text">PROJECTS</span>
+            </a>
+            <a href="certificates.html" class="nav-link" data-section="certificates">
+                <span class="link-bg"></span>
+                <span class="link-text">CERTIFICATES</span>
+            </a>
+            <a href="contact.html" class="nav-link" data-section="contact">
+                <span class="link-bg"></span>
+                <span class="link-text">CONTACT</span>
+            </a>
+        </div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-bg"></div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link" data-index="0">HOME</a>
+            <a href="about.html" class="mobile-link" data-index="1">ABOUT</a>
+            <a href="skills.html" class="mobile-link" data-index="2">SKILLS</a>
+            <a href="projects.html" class="mobile-link" data-index="3">PROJECTS</a>
+            <a href="certificates.html" class="mobile-link" data-index="4">CERTIFICATES</a>
+            <a href="contact.html" class="mobile-link" data-index="5">CONTACT</a>
+        </div>
     </div>
-  </nav>
-
-  <!-- Hero Background -->
-  <div class="fixed inset-0 z-0">
-    <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-30">
-      <source src="video.mp4" type="video/mp4">
-    </video>
-    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black"></div>
-  </div>
-
-  <!-- Main Content -->
-  <main class="relative z-10 w-full">
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center pt-20 px-6">
-      <div class="flex flex-col lg:flex-row items-center justify-center gap-16" data-aos="fade-up">
-
-        <!-- Profile Card -->
-        <div
-          class="glass rounded-3xl p-8 max-w-sm w-full text-center pop-out border-purple-500/20 relative overflow-hidden">
-          <div class="absolute top-4 right-4 flex flex-col items-end">
-            <div class="flex items-center text-[10px] font-bold text-green-400 uppercase tracking-widest mb-1">
-              <span class="status-dot"></span> Online
-            </div>
-            <div id="live-clock" class="text-xs font-mono text-gray-400">00:00:00</div>
-          </div>
-
-          <div class="relative w-40 h-40 mx-auto mb-6">
-            <div class="absolute inset-0 bg-purple-500 rounded-full blur-2xl opacity-20 animate-pulse"></div>
-            <img src="profil1.jpg" alt="Sheva Lukiyanto"
-              class="relative w-full h-full rounded-2xl object-cover border border-white/10" />
-          </div>
-          <h1 class="text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Sheva
-            Lukiyanto</h1>
-          <p class="text-purple-400 font-medium mb-4">Computer Science Student</p>
-          <p class="text-sm text-gray-400 mb-8 leading-relaxed">
-            Seorang mahasiswa ilmu komputer semester 4 yang hobi mengembangkan diri dan belajar hal baru setiap hari.
-          </p>
-          <a href="contact.html"
-            class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-semibold hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-all">
-            Contact Me
-          </a>
+    <section id="hero" class="section hero-section">
+        <div class="hero-bg-shapes">
+            <div class="bg-shape shape-1"></div>
+            <div class="bg-shape shape-2"></div>
+            <div class="bg-shape shape-3"></div>
+            <div class="bg-shape shape-4"></div>
         </div>
-
-        <!-- Welcome Text -->
-        <div class="text-center lg:text-left max-w-xl">
-          <h2 class="text-5xl lg:text-7xl font-bold mb-6 tracking-tight leading-tight">
-            Crafting Digital <br />
-            <span
-              class="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent italic">Experiences.</span>
-          </h2>
-          <p class="text-xl text-gray-300 mb-8 max-w-md mx-auto lg:mx-0">
-            Selamat datang di portofolio saya. Mari jelajahi kemampuan, hobi, dan perjalanan saya di dunia teknologi.
-          </p>
-          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-            <div class="px-5 py-2 rounded-xl glass text-sm font-semibold text-purple-300 border-purple-500/30">#Coding
+        <div class="halftone-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-label">
+                <div class="label-line"></div>
+                <span>SELAMAT DATANG DI DUNIA DIGITAL SAYA</span>
             </div>
-            <div class="px-5 py-2 rounded-xl glass text-sm font-semibold text-blue-300 border-blue-500/30">#Design</div>
-            <div class="px-5 py-2 rounded-xl glass text-sm font-semibold text-green-300 border-green-500/30">#Learning
+            <h1 class="hero-title">
+                <span class="title-line line-1" data-text="I AM">I AM</span>
+                <span class="title-line line-2" data-text="SHEVA">SHEVA</span>
+                <span class="title-line line-3 accent" data-text="LUKIYANTO">LUKIYANTO</span>
+            </h1>
+            <p class="hero-subtitle">Mahasiswa Ilmu Komputer Universitas Lampung — membangun pengalaman digital yang kreatif, fungsional, dan berkesan.</p>
+            <div class="hero-cta">
+                <a href="projects.html" class="btn btn-primary">
+                    <span class="btn-bg"></span>
+                    <span class="btn-text">VIEW MY WORK</span>
+                    <svg class="btn-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <span class="btn-text">GET IN TOUCH</span>
+                </a>
             </div>
-          </div>
         </div>
-
-      </div>
+        <div class="hero-visual">
+            <div class="persona-card">
+                <div class="card-inner">
+                    <div class="card-stripe"></div>
+                    <div class="card-avatar">
+                        <div class="avatar-mask">
+                            <img src="profil1.jpg" alt="Sheva Lukiyanto" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="info-name">SHEVA LUKIYANTO</div>
+                        <div class="info-role">CS STUDENT & DEVELOPER</div>
+                        <div class="info-stats">
+                            <div class="stat">
+                                <span class="stat-label">CODE</span>
+                                <div class="stat-bar"><div class="stat-fill" style="--fill: 85%"></div></div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">DESIGN</span>
+                                <div class="stat-bar"><div class="stat-fill" style="--fill: 80%"></div></div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">ML / AI</span>
+                                <div class="stat-bar"><div class="stat-fill" style="--fill: 70%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>SCROLL DOWN</span>
+        </div>
     </section>
 
-    <!-- Skills Section -->
-    <section class="py-20 px-6 max-w-6xl mx-auto">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="section-title">My Tech Stack</h2>
-        <p class="text-gray-400">Teknologi dan tools yang sering saya gunakan dalam mendevelop sebuah projek.</p>
-      </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bg">
+            <div class="footer-stripe"></div>
+        </div>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 28H28L16 2Z" fill="var(--red)"/>
+                    <circle cx="16" cy="18" r="4" fill="var(--white)"/>
+                </svg>
+                <span>SHEVA LUKIYANTO</span>
+            </div>
+            <p class="footer-text">Designed &amp; Built with ❤️ by Sheva Lukiyanto — © 2026</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="projects.html">Projects</a>
+                <a href="certificates.html">Certificates</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up" data-aos-delay="200">
-        <!-- Skill 1 -->
-        <div class="glass p-6 rounded-2xl text-center pop-out group">
-          <i class="fab fa-html5 text-orange-500 text-4xl mb-4 group-hover:scale-110 transition-transform"></i>
-          <h3 class="font-bold">HTML5</h3>
-        </div>
-        <!-- Skill 2 -->
-        <div class="glass p-6 rounded-2xl text-center pop-out group">
-          <i class="fab fa-css3-alt text-blue-500 text-4xl mb-4 group-hover:scale-110 transition-transform"></i>
-          <h3 class="font-bold">CSS3</h3>
-        </div>
-        <!-- Skill 3 -->
-        <div class="glass p-6 rounded-2xl text-center pop-out group">
-          <i class="fab fa-js text-yellow-500 text-4xl mb-4 group-hover:scale-110 transition-transform"></i>
-          <h3 class="font-bold">JavaScript</h3>
-        </div>
-        <!-- Skill 4 -->
-        <div class="glass p-6 rounded-2xl text-center pop-out group">
-          <i class="fab fa-java text-red-500 text-4xl mb-4 group-hover:scale-110 transition-transform"></i>
-          <h3 class="font-bold">Java</h3>
-        </div>
-        <!-- Skill 5 -->
-        <div class="glass p-6 rounded-2xl text-center pop-out group">
-          <i class="fab fa-python text-blue-400 text-4xl mb-4 group-hover:scale-110 transition-transform"></i>
-          <h3 class="font-bold">Python</h3>
-        </div>
-        <!-- Skill 6 -->
-        <div class="glass p-6 rounded-2xl text-center pop-out group">
-          <i class="fab fa-figma text-purple-400 text-4xl mb-4 group-hover:scale-110 transition-transform"></i>
-          <h3 class="font-bold">Figma</h3>
-        </div>
-        <!-- Skill 7 -->
-        <div class="glass p-6 rounded-2xl text-center pop-out group">
-          <i class="fab fa-git-alt text-orange-600 text-4xl mb-4 group-hover:scale-110 transition-transform"></i>
-          <h3 class="font-bold">Git</h3>
-        </div>
-        <!-- Skill 8 -->
-        <div class="glass p-6 rounded-2xl text-center pop-out group">
-          <i class="fas fa-database text-silver text-4xl mb-4 group-hover:scale-110 transition-transform"></i>
-          <h3 class="font-bold">SQL</h3>
-        </div>
-      </div>
-    </section>
+    <!-- Cursor trail effect -->
+    <div id="cursor-trail" class="cursor-trail"></div>
 
-  </main>
-
-  <footer class="w-full bg-black/80 backdrop-blur-md border-t border-white/5 text-white text-center py-6 relative z-10">
-    <p class="text-sm text-gray-500">© 2026 Made with Heart by <span class="text-purple-400">Sheva Lukiyanto</span></p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="main.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
